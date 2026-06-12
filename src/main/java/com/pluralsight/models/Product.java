@@ -16,39 +16,19 @@ import org.springframework.context.annotation.EnableMBeanExport;
 public class Product
 {
     @Id // '@Id' assigns the primary key column ('productId')
-    @Column(name="ProductID")
+    @Column(name = "ProductID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer productId;
 
     @Column(name = "ProductName")
     private String productName;
 
-    @Column(name = "SupplierID")
-    private Integer supplierId;
-
     @Column(name = "CategoryID")
     private Integer categoryId;
 
-    @Column(name = "QuantityPerUnit")
-    private Integer quantityPerUnit;
-
     @Column(name = "UnitPrice")
     private Double unitPrice;
-
-    @Column(name = "UnitsInStock")
-    private Integer unitsInStock;
-
-    @Column(name = "UnitsOnOrder")
-    private Integer unitsOnOrder;
-
-    @Column(name = "ReorderLevel")
-    private Integer reorderLevel;
-
-    @Column(name = "Discontinued")
-    private Integer discontinued;
-
 }
-
 
 //{
 //    private int productId;

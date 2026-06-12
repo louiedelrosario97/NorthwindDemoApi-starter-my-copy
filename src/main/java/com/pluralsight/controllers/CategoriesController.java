@@ -1,8 +1,5 @@
 package com.pluralsight.controllers;
 
-// all requests related to Categories will
-// be handled by THIS controller
-
 import com.pluralsight.models.Category;
 import com.pluralsight.services.CategoriesService;
 import org.springframework.beans.factory.annotation.Autowired;

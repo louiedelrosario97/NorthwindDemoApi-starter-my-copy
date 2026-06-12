@@ -32,7 +32,7 @@ public class ProductsService
 
     public Product addProduct(Product product)
     {
-        var newProduct = repository.save(category);
+        var newProduct = repository.save(product);
 
         return newProduct;
     }
@@ -41,9 +41,12 @@ public class ProductsService
     {
         Product newProduct = repository.findById(id).get();
 
+        newProduct.setProductId   (product.getProductId());
         newProduct.setProductName (product.getProductName());
+        newProduct.setCategoryId  (product.getCategoryId());
         newProduct.setUnitPrice   (product.getUnitPrice());
-        newProduct.setUnitsInStock(product.getUnitsInStock());
+
+        return repository.save(newProduct);
     }
 
     public void deleteProduct(int id)
